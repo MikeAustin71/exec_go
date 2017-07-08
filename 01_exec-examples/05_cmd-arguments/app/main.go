@@ -37,15 +37,21 @@ func DeleteTargetFiles()  error {
 	cmd.Stderr = &stderr
 
 	err := cmd.Run()
+
+	fmt.Println("-------------- Result --------------")
+	fmt.Println("Result DeleteTargetFiles(): " )
+	fmt.Println(out.String())
+	fmt.Println("stderr: ", stderr.String())
+	fmt.Println("------------------------------------")
+	fmt.Println("")
 	if err != nil {
+		fmt.Println("!!!!!!!!!!!!!! ERROR !!!!!!!!!!!!!!!")
 		fmt.Println("*** ERROR DeleteTargetFiles() ***")
 		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
-		fmt.Println(out.String() )
+		fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 		return err
 	}
 
-	fmt.Println("Result DeleteTargetFiles(): " )
-	fmt.Println(out.String())
 
 	return nil
 }
@@ -71,15 +77,21 @@ func CopyFiles() error {
 	cmd.Stderr = &stderr
 
 	err := cmd.Run()
+
+	fmt.Println("-------------- Result --------------")
+	fmt.Println("Result CopyFiles() : " )
+	fmt.Println(out.String())
+	fmt.Println("------------------------------------")
+	fmt.Println()
+
 	if err != nil {
+		fmt.Println("!!!!!!!!!!!!!! ERROR !!!!!!!!!!!!!!!")
 		fmt.Println("*** ERROR CopyFiles() ***")
 		fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
-		fmt.Println(out.String() )
+		fmt.Println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 		return err
 	}
 
-	fmt.Println("Result CopyFiles() : " )
-	fmt.Println(out.String())
 
 
 	return nil
