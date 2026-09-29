@@ -1,2 +1,2 @@
 # exec_go
-Command Execution Examples in 'Go' (golang)
+Command Execution Examples in 'Go' (golang).
